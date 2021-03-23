@@ -2,6 +2,7 @@ import { join } from "path";
 import express from "express";
 import socketIO from "socket.io";
 import logger from "morgan";
+import { Socket } from "dgram";
 
 const PORT = 4000;
 const app = express();
@@ -19,10 +20,6 @@ const server = app.listen(PORT, handleListening);
 
 const io = socketIO(server);
 
-// let sockets = [];
-
 io.on("connection", (socket) => {
-  sockets.push(socket.id);
+  socket.on("helloGuys", () => console.log("the client said Hello"));
 });
-
-// setInterval(() => console.log(sockets), 1000);
