@@ -1,5 +1,13 @@
 $color: red;
 
 body {
-  background-color: $color;
+}
+
+@keyframes hi {
+  from {
+    color: #000;
+  }
+  to {
+    color: #fff;
+  }
 }
