@@ -2,7 +2,6 @@ import { join } from "path";
 import express from "express";
 import socketIO from "socket.io";
 import logger from "morgan";
-import { Socket } from "dgram";
 
 const PORT = 4000;
 const app = express();
